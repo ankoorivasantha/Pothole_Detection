@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pothole Detection Project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Pothole Detection</h1>
+        <p>A Hybrid CNN-Transformer Project by [Your Name]</p>
+    </header>
+    <main>
+        <section class="intro">
+            <h2>Welcome to Pothole Detection</h2>
+            <p>Detect potholes with ease using our advanced AI model. Choose your mode below!</p>
+        </section>
+        <section class="options">
+            <div class="card">
+                <h3>Upload an Image</h3>
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <input type="file" id="file" name="file" accept="image/*" required>
+                    <input type="submit" value="Analyze Image">
+                </form>
+            </div>
+            <div class="card">
+                <h3>Live Webcam</h3>
+                <a href="/live"><button>Start Live Detection</button></a>
+            </div>
+        </section>
+        <section class="about">
+            <h2>About the Project</h2>
+            <p>This project leverages a HybridConvTransformer model built with PyTorch and OpenCV to identify potholes in real-time, enhancing road safety.</p>
+        </section>
+    </main>
+    <footer>
+        <p>Pathhole Detection</p>
+    </footer>
+</body>
+</html>

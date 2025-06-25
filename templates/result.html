@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detection Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Pothole Detection Result</h1>
+    </header>
+    <main>
+        <section class="result">
+            <div class="card">
+                <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Detected Image">
+                <h3>{{ result }}</h3>
+                <a href="/"><button>Back to Home</button></a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 [Your Name]. All rights reserved.</p>
+    </footer>
+</body>
+</html>
